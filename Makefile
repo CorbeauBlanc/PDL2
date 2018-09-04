@@ -16,11 +16,17 @@ SDL2_TTF_DIR=./SDL2_ttf-$(SDL2_TTF_VERSION)
 
 
 # Generic rules
-all: libsdl2 libsdl2_image libsdl2_ttf libccaster
+all: libccaster
+	@echo "Packing PDL2"
+	@if ! [ -e ./build/PDL2-$(VERSION) ]; then\
+		mkdir -p ./build/PDL2-$(VERSION);\
+	fi
+	@$(CP) -ru ./src/* ./build/PDL2-$(VERSION)
+	@$(CP) -u ./libccaster/libccaster.a ./build/PDL2-$(VERSION)
 	@echo "Done."
 	@echo
 
-install:
+dependencies: libsdl2 libsdl2_image libsdl2_ttf
 	@echo "Installing SDL2"
 	@cd $(SDL2_DIR)/build && sudo make install
 	@echo
@@ -30,13 +36,6 @@ install:
 	@echo "Installing SDL2_ttf"
 	@cd $(SDL2_TTF_DIR) && sudo make install
 	@echo
-
-	@echo "Packing PDL2"
-	@if ! [ -e ./build/PDL2-$(VERSION) ]; then\
-		mkdir -p ./build/PDL2-$(VERSION);\
-	fi
-	@$(CP) -ru ./src/* ./build/PDL2-$(VERSION)
-	@$(CP) -u ./libccaster/libccaster.a ./build/PDL2-$(VERSION)
 
 clean:
 	@if [ -e $(SDL2_DIR) ]; then\
