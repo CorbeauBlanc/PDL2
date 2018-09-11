@@ -14,3 +14,6 @@ Then a simple `make` will do just fine. You can also build and install the SDL2 
 Everything you'll need will be contained in "build/PDL2-#.#.#", include it in your code with `use` like any other pony package.
 
 (currently no docs or wiki cuz I don't have time to do them so you'll have to look at the sources from here, sry. The primitive is named `SDL` and is declared in "SDL.pony")
+
+## Additional notes
+Please keep in mind that this is my very first project in ponylang, so things might not be very well done. They should improve over time though as I learn more about the language. This is just a way to have a basic interface to work with and make the learning easier.
