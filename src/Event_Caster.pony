@@ -1,7 +1,6 @@
 use "collections"
 use "strings"
 use "lib:SDL2"
-use "path:./libccaster"
 use "lib:ccaster"
 
 use @CC_cast_to_CommonEvent[SDLPtrCommonEvent](event: SDLPtrEvent)

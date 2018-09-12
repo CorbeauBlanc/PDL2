@@ -17,21 +17,21 @@ class UdefSDLFlag is SDLFlag
 /*
 	Initialisation flags
 */
-primitive NULLFLAG is SDLFlag
+primitive INITNULLFLAG is SDLFlag
 	fun apply(): U32 => 0x00000000
-primitive TIMER is SDLFlag
+primitive INITTIMER is SDLFlag
 	fun apply(): U32 => 0x00000001
-primitive AUDIO is SDLFlag
+primitive INITAUDIO is SDLFlag
 	fun apply(): U32 => 0x00000010
-primitive VIDEO is SDLFlag
+primitive INITVIDEO is SDLFlag
 	fun apply(): U32 => 0x00000020
-primitive JOYSTICK is SDLFlag
+primitive INITJOYSTICK is SDLFlag
 	fun apply(): U32 => 0x00000200
-primitive HAPTIC is SDLFlag
+primitive INITHAPTIC is SDLFlag
 	fun apply(): U32 => 0x00001000
-primitive GAMECONTROLLER is SDLFlag
+primitive INITGAMECONTROLLER is SDLFlag
 	fun apply(): U32 => 0x00002000
-primitive EVENTS is SDLFlag
+primitive INITEVENTS is SDLFlag
 	fun apply(): U32 => 0x00004000
-primitive NOPARACHUTE is SDLFlag
+primitive INITNOPARACHUTE is SDLFlag
 	fun apply(): U32 => 0x00100000

@@ -10,7 +10,7 @@ Because FFI calls are ugly and a lot of C concepts are a real pain in the a** to
 
 ## K. How does it work?
 The installation is pretty easy. First you need to install the SDL2 (http://wiki.libsdl.org/Installation) along with SDL2_image (https://www.libsdl.org/projects/SDL_image/) and SDL2_ttf (https://www.libsdl.org/projects/SDL_ttf/).
-Then a simple `make` will do just fine. You can also build and install the SDL2 + SDL2_image + SDL2_ttf from their sources with `make dependencies`.
+Then a simple `make` will do just fine. You can also build and install the SDL2 + SDL2_image + SDL2_ttf from their sources with `make dependencies` or separately with `make libsdl2` `make libsdl2_image` `make libsdl2_ttf` `make libccaster`.
 Everything you'll need will be contained in "build/PDL2-#.#.#", include it in your code with `use` like any other pony package.
 
 (currently no docs or wiki cuz I don't have time to do them so you'll have to look at the sources from here, sry. The primitive is named `SDL` and is declared in "SDL.pony")

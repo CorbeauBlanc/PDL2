@@ -20,43 +20,43 @@ type SDLWindow is Pointer[_Window]
 /*
 	Window flags
 */
-primitive WFULLSCREEN is SDLFlag
+primitive WINDOWFULLSCREEN is SDLFlag
 	fun apply(): U32 => 0x00000001
-primitive WOPENGL is SDLFlag
+primitive WINDOWOPENGL is SDLFlag
 	fun apply(): U32 => 0x00000002
-primitive WSHOWN is SDLFlag
+primitive WINDOWSHOWN is SDLFlag
 	fun apply(): U32 => 0x00000004
-primitive WHIDDEN is SDLFlag
+primitive WINDOWHIDDEN is SDLFlag
 	fun apply(): U32 => 0x00000008
-primitive WBORDERLESS is SDLFlag
+primitive WINDOWBORDERLESS is SDLFlag
 	fun apply(): U32 => 0x00000010
-primitive WRESIZABLE is SDLFlag
+primitive WINDOWRESIZABLE is SDLFlag
 	fun apply(): U32 => 0x00000020
-primitive WMINIMIZED is SDLFlag
+primitive WINDOWMINIMIZED is SDLFlag
 	fun apply(): U32 => 0x00000040
-primitive WMAXIMIZED is SDLFlag
+primitive WINDOWMAXIMIZED is SDLFlag
 	fun apply(): U32 => 0x00000080
-primitive WINPUTGRABBED is SDLFlag
+primitive WINDOWINPUTGRABBED is SDLFlag
 	fun apply(): U32 => 0x00000100
-primitive WINPUTFOCUS is SDLFlag
+primitive WINDOWINPUTFOCUS is SDLFlag
 	fun apply(): U32 => 0x00000200
-primitive WMOUSEFOCUS is SDLFlag
+primitive WINDOWMOUSEFOCUS is SDLFlag
 	fun apply(): U32 => 0x00000400
-primitive WFULLSCREENDESKTOP is SDLFlag
-	fun apply(): U32 => WFULLSCREEN() or 0x00001000
-primitive WFOREIGN is SDLFlag
+primitive WINDOWFULLSCREENDESKTOP is SDLFlag
+	fun apply(): U32 => WINDOWFULLSCREEN() or 0x00001000
+primitive WINDOWFOREIGN is SDLFlag
 	fun apply(): U32 => 0x00000800
-primitive WALLOWHIGHDPI is SDLFlag
+primitive WINDOWALLOWHIGHDPI is SDLFlag
 	fun apply(): U32 => 0x00002000
-primitive WMOUSECAPTURE is SDLFlag
+primitive WINDOWMOUSECAPTURE is SDLFlag
 	fun apply(): U32 => 0x00004000
-primitive WALWAYSONTOP is SDLFlag
+primitive WINDOWALWAYSONTOP is SDLFlag
 	fun apply(): U32 => 0x00008000
-primitive WSKIPTASKBAR is SDLFlag
+primitive WINDOWSKIPTASKBAR is SDLFlag
 	fun apply(): U32 => 0x00010000
-primitive WUTILITY is SDLFlag
+primitive WINDOWUTILITY is SDLFlag
 	fun apply(): U32 => 0x00020000
-primitive WTOOLTIP is SDLFlag
+primitive WINDOWTOOLTIP is SDLFlag
 	fun apply(): U32 => 0x00040000
-primitive WPOPUPMENU is SDLFlag
+primitive WINDOWPOPUPMENU is SDLFlag
 	fun apply(): U32 => 0x00080000
