@@ -22,7 +22,6 @@ all: libccaster
 		mkdir -p ./build/PDL2-$(VERSION);\
 	fi
 	@$(CP) -ru ./src/* ./build/PDL2-$(VERSION)
-	@$(CP) -u ./libccaster/libccaster.a ./build/PDL2-$(VERSION)
 	@echo "Done."
 	@echo
 
@@ -105,7 +104,7 @@ $(SDL2_TTF_DIR): $(SDL2_TTF_DIR).tar.gz
 # Installing SDL2 libraries
 libsdl2: $(SDL2_DIR)
 	@echo "Launching SDL2 installation..."
-	@mkdir $(SDL2_DIR)/build
+	@mkdir -p $(SDL2_DIR)/build
 	@cd $(SDL2_DIR)/build && ../configure && make
 	@echo
 
@@ -124,4 +123,7 @@ libsdl2_ttf: $(SDL2_TTF_DIR)
 libccaster:
 	@echo "Making libccaster..."
 	@cd ./libccaster && $(MAKE)
+	@mkdir -p ~/.PDL2/libccaster
+	@$(CP) -ru ./libccaster/libccaster.a ~/.PDL2/libccaster/
+	@echo "use \"path:$$HOME/.PDL2/libccaster\"" > ./src/libinclude.pony
 	@echo

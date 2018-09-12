@@ -2,7 +2,6 @@ use "collections"
 use "strings"
 use "lib:SDL2"
 use "lib:SDL_ttf"
-use "../"
 
 use @TTF_Init[I32]()
 use @TTF_WasInit[I32]()
